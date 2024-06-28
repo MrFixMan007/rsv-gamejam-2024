@@ -14,14 +14,14 @@ public class Main_menu : MonoBehaviour
     //         Cursor.visible = true;
     //     }
     // }
-    public void StartGame()
+    public void StartGame(int i)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(i);
     }
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()
