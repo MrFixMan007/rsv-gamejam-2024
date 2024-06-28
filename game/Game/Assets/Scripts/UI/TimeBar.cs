@@ -18,11 +18,14 @@ public class TimeBar : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(time_left);
         if (time_left > 0) 
         {
             time_left -= Time.deltaTime;
             slider.value = time_left / max_time;
+        }
+        else
+        {
+            slider.gameObject.SetActive(false);
         }
     }
 }
