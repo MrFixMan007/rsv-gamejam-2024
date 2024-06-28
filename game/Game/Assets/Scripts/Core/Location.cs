@@ -26,7 +26,11 @@ public class Location : MonoBehaviour
     
     public enum LocationType
     {
+        LivingRoom,
         ChildRoom,
-        BathRoom
+        Bathroom,
+        Hallway,
+        Bedroom,
+        Kitchen
     }
 }
