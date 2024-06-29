@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4602273281603704143}
   - component: {fileID: 2476059318148457838}
   - component: {fileID: 8099434203704702296}
+  - component: {fileID: 5966167039993148515}
   m_Layer: 0
   m_Name: Sink
   m_TagString: Untagged
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4054038, y: 0.3581595}
   m_EdgeRadius: 0
+--- !u!114 &5966167039993148515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9023356770862640949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcbfc972d5d51a45bc362aeb095f981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  containerLocation: {fileID: 0}
