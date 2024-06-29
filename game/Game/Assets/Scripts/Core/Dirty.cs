@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class Dirty : MonoBehaviour
 {
@@ -26,7 +24,7 @@ public class Dirty : MonoBehaviour
         if (_step >= speedOfPollution)
         {
             _step = 0;
-            _spriteOpacity.plusTransparent();
+            _spriteOpacity.PlusTransparent();
             Debug.Log("Стало грязнее");
         }
     }
@@ -35,7 +33,7 @@ public class Dirty : MonoBehaviour
     {
         if (_player.GetComponent<Inventory>().Item is ItemVacuumCleaner)
         {
-            _spriteOpacity.makeTransparent();
+            _spriteOpacity.MakeTransparent();
         }
     }
 }

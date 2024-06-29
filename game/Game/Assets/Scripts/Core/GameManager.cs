@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -34,11 +32,11 @@ public class GameManager : MonoBehaviour
         gameObjectDestroy.transform.position = Vector3.zero;
     }
 
-    public void changePickedItemUI(Item item)
+    public void ChangePickedItemUI(Item item)
     {
         _inventoryUI.change_picked_item(item);
     }
-    public void changePickedItemUIEmpty()
+    public void ChangePickedItemUIEmpty()
     {
         _inventoryUI.empty_picked_item();
     }

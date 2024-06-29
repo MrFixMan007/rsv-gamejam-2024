@@ -2,6 +2,6 @@ public class ItemVacuumCleaner : Item, Pickable
 {
     public override void Use()
     {
-        if(location != null) location.Clear();
+        if(location) location.Clear();
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory
@@ -13,7 +11,7 @@ public class Inventory
     public void DiscardItem(Vector3 newItemCoordinates)
     {
         GameManager.Instance.ReturnObject(_itemObject, newItemCoordinates);
-        GameManager.Instance.changePickedItemUIEmpty();
+        GameManager.Instance.ChangePickedItemUIEmpty();
         _item = null;
         _itemObject = null;
     }
@@ -22,7 +20,7 @@ public class Inventory
     {
         _itemObject = NewItemCanPickup;
         GameManager.Instance.DestroyObject(NewItemCanPickup);
-        GameManager.Instance.changePickedItemUI((Item)newItem);
+        GameManager.Instance.ChangePickedItemUI((Item)newItem);
         _item = newItem;
     }
 
@@ -32,7 +30,7 @@ public class Inventory
     {
         if (_item == null)
         {
-            if (NewItemCanPickup != null)
+            if (NewItemCanPickup)
             {
                 PickUpItem(NewItemCanPickup.GetComponent<Pickable>());
             }

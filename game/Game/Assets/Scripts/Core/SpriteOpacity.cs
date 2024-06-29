@@ -1,47 +1,44 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpriteOpacity : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer _spriteRenderer;
     [SerializeField] private float stepOfPollution = 0.1f;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        makeTransparent();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        MakeTransparent();
     }
 
-    public void makeTransparent()
+    public void MakeTransparent()
     {
-        changeTransparent(0f);
+        ChangeTransparent(0f);
     }
     
-    public void makeNonTransparent()
+    public void MakeNonTransparent()
     {
-        changeTransparent(1f);
+        ChangeTransparent(1f);
     }
 
-    public void changeTransparent(float newAlpha)
+    private void ChangeTransparent(float newAlpha)
     {
-        if (spriteRenderer != null)
+        if (_spriteRenderer != null)
         {
-            Color newColor = spriteRenderer.color;
+            Color newColor = _spriteRenderer.color;
             newColor.a = newAlpha;
-            spriteRenderer.color = newColor;
+            _spriteRenderer.color = newColor;
         }
     }
 
-    public void plusTransparent()
+    public void PlusTransparent()
     {
-        if (spriteRenderer != null)
+        if (_spriteRenderer)
         {
-            Color newColor = spriteRenderer.color;
+            Color newColor = _spriteRenderer.color;
             if ( newColor.a + stepOfPollution < 1f) newColor.a += stepOfPollution;
             else newColor.a = 1;
-            spriteRenderer.color = newColor;
+            _spriteRenderer.color = newColor;
         }
     }
 }

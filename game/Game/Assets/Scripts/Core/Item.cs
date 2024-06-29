@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public abstract class Item : MonoBehaviour
 {
@@ -15,9 +13,7 @@ public abstract class Item : MonoBehaviour
     {
         if ( containerLocation != null) location = containerLocation.GetComponent<Location>();
         playerObject = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log(playerObject);
         player = playerObject.GetComponent<Player>();
-        Debug.Log(player);
     }
 
     // protected void OnCollisionEnter2D(Collision2D other)
