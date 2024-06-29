@@ -19,9 +19,9 @@ public class Location : MonoBehaviour
         
     }
 
-    public void clear()
+    public void Clear()
     {
-        Debug.Log("Чиста!!!");
+        Debug.Log("Чисто!");
     }
     
     public enum LocationType

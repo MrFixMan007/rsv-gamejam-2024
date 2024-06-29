@@ -6,12 +6,18 @@ public abstract class Item : MonoBehaviour
 {
     [SerializeField] protected GameObject containerLocation;
     protected Location location;
+    protected GameObject playerObject;
+    protected Player player;
 
     public abstract void Use();
 
-    protected void Start()
+    protected virtual void Start()
     {
         if ( containerLocation != null) location = containerLocation.GetComponent<Location>();
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        Debug.Log(playerObject);
+        player = playerObject.GetComponent<Player>();
+        Debug.Log(player);
     }
 
     // protected void OnCollisionEnter2D(Collision2D other)
@@ -27,6 +33,8 @@ public abstract class Item : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Игрок Привет!");
+            
+            player.SetNewItemCanPickup(gameObject);
         }
     }
 
@@ -43,6 +51,7 @@ public abstract class Item : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Игрок Вышел(");
+            player.SetCantPickup();
         }
     }
 }

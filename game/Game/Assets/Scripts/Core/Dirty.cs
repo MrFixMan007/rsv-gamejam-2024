@@ -7,6 +7,7 @@ public class Dirty : MonoBehaviour
     public float speedOfPollution = 5;
     private float _step;
     private SpriteOpacity _spriteOpacity;
+    private GameObject _player;
     
     [SerializeField] protected GameObject containerLocation;
     private Location _location;
@@ -16,6 +17,7 @@ public class Dirty : MonoBehaviour
         _spriteOpacity = GetComponentInChildren<SpriteOpacity>();
         Debug.Log(_spriteOpacity);
         _location = containerLocation.GetComponent<Location>();
+        _player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void FixedUpdate()
@@ -26,6 +28,14 @@ public class Dirty : MonoBehaviour
             _step = 0;
             _spriteOpacity.plusTransparent();
             Debug.Log("Стало грязнее");
+        }
+    }
+
+    public void Clean()
+    {
+        if (_player.GetComponent<Inventory>().Item is ItemVacuumCleaner)
+        {
+            _spriteOpacity.makeTransparent();
         }
     }
 }

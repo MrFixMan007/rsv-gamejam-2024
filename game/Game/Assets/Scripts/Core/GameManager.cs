@@ -4,19 +4,49 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private Inventory_UI _inventoryUI;
     public static GameManager Instance { get; private set; }
-    [SerializeField] private GameObject prefabItemVacuumCleaner; 
+    [SerializeField] private GameObject prefabItemVacuumCleaner;
+    private GameObject _parentObject;
 
     public bool isGamePaused;
 
     public void SpawnPickablePrefab(Pickable item, Vector3 newItemCoordinates)
     {
+        Debug.Log(item);
         switch (item)
         {
             case ItemVacuumCleaner:
-                Instantiate(prefabItemVacuumCleaner, newItemCoordinates, Quaternion.identity);
+                Instantiate(prefabItemVacuumCleaner, newItemCoordinates, Quaternion.identity, _parentObject.transform);
                 break;
         }
+    }
+
+    public void ReturnObject(GameObject gameObjectToReturn, Vector3 coordinates)
+    {
+        gameObjectToReturn.transform.position = coordinates;
+        gameObjectToReturn.SetActive(true);
+    }
+
+    public void DestroyObject(GameObject gameObjectDestroy)
+    {
+        gameObjectDestroy.SetActive(false);
+        gameObjectDestroy.transform.position = Vector3.zero;
+    }
+
+    public void changePickedItemUI(Item item)
+    {
+        _inventoryUI.change_picked_item(item);
+    }
+    public void changePickedItemUIEmpty()
+    {
+        _inventoryUI.empty_picked_item();
+    }
+
+    private void Start()
+    {
+        _inventoryUI = GameObject.FindGameObjectWithTag("UI_Inventory").GetComponent<Inventory_UI>();
+        _parentObject = GameObject.FindGameObjectWithTag("Location");
     }
 
     private void Awake()
@@ -46,17 +76,5 @@ public class GameManager : MonoBehaviour
         isGamePaused = false;
         Time.timeScale = 1f; // Восстанавливает время в игре
         Debug.Log("Game Resumed");
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

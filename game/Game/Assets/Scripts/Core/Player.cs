@@ -5,37 +5,38 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Clothes clothes;
-    public Inventory inventory;
+    public Inventory inventory = new Inventory();
     
-    public void pickUpItem(GameObject gameObjectItem)
-    {
-        Pickable item = gameObjectItem.GetComponent<Pickable>();
-        if (inventory.IsEmpty())
-        {
-            inventory.DiscardItem(gameObjectItem.transform.position);
-        }
-        inventory.PickUpItem(item);
-        // gameObjectItem.GetComponent<>().setChangeUISlot(item);
-        Destroy(gameObjectItem);
-    }
+    // public void pickUpItem(GameObject gameObjectItem)
+    // {
+    //     Pickable item = gameObjectItem.GetComponent<Pickable>();
+    //     if (inventory.IsEmpty())
+    //     {
+    //         inventory.DiscardItem(gameObjectItem.transform.position);
+    //     }
+    //     inventory.PickUpItem(item);
+    //     // gameObjectItem.GetComponent<>().setChangeUISlot(item);
+    //     Destroy(gameObjectItem);
+    // }
 
     public void DiscardItem(Vector3 discardedItemCoordinates)
     {
-        inventory.DiscardItem(discardedItemCoordinates);
-    }
-
-    private void useItem()
-    {
-        inventory.Use();
+        if (!inventory.IsEmpty()) inventory.DiscardItem(discardedItemCoordinates);
     }
 
     public void Interact()
     {
-        if (inventory.IsEmpty())
-        {
-            Debug.Log("Посвистела");
-        }
         inventory.Use();
+    }
+
+    public void SetNewItemCanPickup(GameObject newItemCanPickup)
+    {
+        inventory.NewItemCanPickup = newItemCanPickup;
+    }
+    
+    public void SetCantPickup()
+    {
+        inventory.NewItemCanPickup = null;
     }
     
     // Start is called before the first frame update

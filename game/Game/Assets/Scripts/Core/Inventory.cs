@@ -5,15 +5,24 @@ using UnityEngine;
 public class Inventory
 {
     private Pickable _item;
-    
+    private GameObject _itemObject;
+    public GameObject NewItemCanPickup;
+
+    public Pickable Item => _item;
+
     public void DiscardItem(Vector3 newItemCoordinates)
     {
-        GameManager.Instance.SpawnPickablePrefab(_item, newItemCoordinates);
+        GameManager.Instance.ReturnObject(_itemObject, newItemCoordinates);
+        GameManager.Instance.changePickedItemUIEmpty();
         _item = null;
+        _itemObject = null;
     }
-    
-    public void PickUpItem(Pickable newItem)
+
+    private void PickUpItem(Pickable newItem)
     {
+        _itemObject = NewItemCanPickup;
+        GameManager.Instance.DestroyObject(NewItemCanPickup);
+        GameManager.Instance.changePickedItemUI((Item)newItem);
         _item = newItem;
     }
 
@@ -23,7 +32,10 @@ public class Inventory
     {
         if (_item == null)
         {
-            
+            if (NewItemCanPickup != null)
+            {
+                PickUpItem(NewItemCanPickup.GetComponent<Pickable>());
+            }
         }
         
         switch (_item)

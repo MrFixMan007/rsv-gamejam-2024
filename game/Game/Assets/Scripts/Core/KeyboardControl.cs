@@ -1,20 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyboardControl : MonoBehaviour
 {
-    private GameObject playerObj = null;
+    private GameObject _playerObj;
+    private Player _player;
+
+    private void Start()
+    {
+        _playerObj = GameObject.FindGameObjectWithTag("Player");
+        _player = _playerObj.GetComponent<Player>();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            GetComponent<Player>().Interact();
+            _player.Interact();
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            playerObj = GameObject.FindGameObjectWithTag("Player");
-            GetComponent<Player>().DiscardItem(new Vector3(playerObj.transform.position.x + 0.02f, playerObj.transform.position.y));
+            _player.DiscardItem
+                (
+                    new Vector3(_playerObj.transform.position.x - 0.06f,
+                        _playerObj.transform.position.y,
+                        _playerObj.transform.position.z)
+                );
         }
     }
 }
