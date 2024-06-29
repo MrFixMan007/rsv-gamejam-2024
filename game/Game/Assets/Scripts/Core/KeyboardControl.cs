@@ -20,11 +20,11 @@ public class KeyboardControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             _player.DiscardItem
-                (
-                    new Vector3(_playerObj.transform.position.x - 0.06f,
-                        _playerObj.transform.position.y,
-                        _playerObj.transform.position.z)
-                );
+            (
+                new Vector3(_playerObj.transform.position.x - 0.06f,
+                    _playerObj.transform.position.y,
+                    _playerObj.transform.position.z)
+            );
         }
     }
 }

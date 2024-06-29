@@ -24,7 +24,7 @@ public abstract class Item : MonoBehaviour
     //     }
     // }
 
-    protected void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -42,7 +42,7 @@ public abstract class Item : MonoBehaviour
     //     }
     // }
 
-    protected void OnTriggerExit2D(Collider2D other)
+    protected virtual void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {

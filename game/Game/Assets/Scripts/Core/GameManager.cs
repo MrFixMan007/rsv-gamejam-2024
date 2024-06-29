@@ -9,16 +9,16 @@ public class GameManager : MonoBehaviour
 
     public bool isGamePaused;
 
-    public void SpawnPickablePrefab(Pickable item, Vector3 newItemCoordinates)
-    {
-        Debug.Log(item);
-        switch (item)
-        {
-            case ItemVacuumCleaner:
-                Instantiate(prefabItemVacuumCleaner, newItemCoordinates, Quaternion.identity, _parentObject.transform);
-                break;
-        }
-    }
+    // public void SpawnPickablePrefab(Pickable item, Vector3 newItemCoordinates)
+    // {
+    //     Debug.Log(item);
+    //     switch (item)
+    //     {
+    //         case ItemVacuumCleaner:
+    //             Instantiate(prefabItemVacuumCleaner, newItemCoordinates, Quaternion.identity, _parentObject.transform);
+    //             break;
+    //     }
+    // }
 
     public void ReturnObject(GameObject gameObjectToReturn, Vector3 coordinates)
     {
