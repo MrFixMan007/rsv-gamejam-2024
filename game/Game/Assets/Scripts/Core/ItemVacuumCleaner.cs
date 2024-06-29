@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ItemVacuumCleaner : Item
 {
-    protected override string name
+    protected override bool canPickUp
     {
-        get => "Пылесос";
+        get => true;
     }
 
     public override void use()

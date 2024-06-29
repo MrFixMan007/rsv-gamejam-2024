@@ -1,29 +1,29 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Dirty : MonoBehaviour
 {
-    public String name;
     public float speedOfPollution = 5;
-    private float step;
+    private float _step;
     private SpriteOpacity _spriteOpacity;
     
-    [SerializeField] protected GameObject _containerLocation;
+    [SerializeField] protected GameObject containerLocation;
     private Location _location;
 
     protected void Start()
     {
         _spriteOpacity = GetComponentInChildren<SpriteOpacity>();
         Debug.Log(_spriteOpacity);
-        _location = _containerLocation.GetComponent<Location>();
+        _location = containerLocation.GetComponent<Location>();
     }
 
     private void FixedUpdate()
     {
-        step += Time.fixedDeltaTime;
-        if (step >= speedOfPollution)
+        _step += Time.fixedDeltaTime;
+        if (_step >= speedOfPollution)
         {
-            step = 0;
+            _step = 0;
             _spriteOpacity.plusTransparent();
             Debug.Log("Стало грязнее");
         }

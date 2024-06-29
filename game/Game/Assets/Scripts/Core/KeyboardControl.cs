@@ -14,7 +14,7 @@ public class KeyboardControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             playerObj = GameObject.FindGameObjectWithTag("Player");
-            GetComponent<Player>().Discard(new Vector3(playerObj.transform.position.x + 0.02f, playerObj.transform.position.y));
+            GetComponent<Player>().DiscardItem(new Vector3(playerObj.transform.position.x + 0.02f, playerObj.transform.position.y));
         }
     }
 }
