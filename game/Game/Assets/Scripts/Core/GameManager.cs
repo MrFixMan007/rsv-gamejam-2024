@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     public bool isGamePaused;
 
-    public void SpawnItemPrefab(Item item, Vector3 newItemCoordinates)
+    public void SpawnPickablePrefab(Pickable item, Vector3 newItemCoordinates)
     {
         switch (item)
         {

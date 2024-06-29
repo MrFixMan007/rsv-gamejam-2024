@@ -1,16 +1,7 @@
-
-using System;
-using UnityEngine;
-
-public class ItemVacuumCleaner : Item
+public class ItemVacuumCleaner : Item, Pickable
 {
-    protected override bool canPickUp
+    public override void Use()
     {
-        get => true;
-    }
-
-    public override void use()
-    {
-        if(_location != null) _location.clear();
+        if(location != null) location.clear();
     }
 }

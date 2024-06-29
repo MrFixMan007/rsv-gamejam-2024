@@ -1,18 +1,17 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public abstract class Item : MonoBehaviour
 {
-    protected abstract Boolean canPickUp { get; }
+    [SerializeField] protected GameObject containerLocation;
+    protected Location location;
 
-    [SerializeField] protected GameObject _containerLocation;
-    protected Location _location;
-
-    public abstract void use();
+    public abstract void Use();
 
     protected void Start()
     {
-        _location = _containerLocation.GetComponent<Location>();
+        if ( containerLocation != null) location = containerLocation.GetComponent<Location>();
     }
 
     // protected void OnCollisionEnter2D(Collision2D other)

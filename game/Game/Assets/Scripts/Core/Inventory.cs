@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class Inventory
 {
-    public Item item;
+    private Pickable _item;
     
-    public void discardItem(Vector3 newItemCoordinates)
+    public void DiscardItem(Vector3 newItemCoordinates)
     {
-        GameManager.Instance.SpawnItemPrefab(item, newItemCoordinates);
+        GameManager.Instance.SpawnPickablePrefab(_item, newItemCoordinates);
+        _item = null;
     }
     
-    public void pickUpItem(Item newItem)
+    public void PickUpItem(Pickable newItem)
     {
-        item = newItem;
+        _item = newItem;
+    }
+
+    public bool IsEmpty() => _item == null;
+
+    public void Use()
+    {
+        if (_item == null)
+        {
+            
+        }
+        
+        switch (_item)
+        {
+            case ItemVacuumCleaner item:
+                item.Use();
+                break;
+        }
     }
 }

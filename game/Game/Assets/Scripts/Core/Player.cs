@@ -9,38 +9,33 @@ public class Player : MonoBehaviour
     
     public void pickUpItem(GameObject gameObjectItem)
     {
-        Item item = gameObjectItem.GetComponent<Item>();
-        if (inventory.item != null)
+        Pickable item = gameObjectItem.GetComponent<Pickable>();
+        if (inventory.IsEmpty())
         {
-            inventory.discardItem(gameObjectItem.transform.position);
+            inventory.DiscardItem(gameObjectItem.transform.position);
         }
-        inventory.pickUpItem(item);
+        inventory.PickUpItem(item);
         // gameObjectItem.GetComponent<>().setChangeUISlot(item);
         Destroy(gameObjectItem);
     }
 
     public void DiscardItem(Vector3 discardedItemCoordinates)
     {
-        inventory.discardItem(discardedItemCoordinates);
+        inventory.DiscardItem(discardedItemCoordinates);
     }
 
     private void useItem()
     {
-        inventory.item.use();
+        inventory.Use();
     }
 
     public void Interact()
     {
-        if (inventory.item == null)
+        if (inventory.IsEmpty())
         {
             Debug.Log("Посвистела");
         }
-        switch (inventory.item)
-        {
-            case ItemVacuumCleaner:
-                useItem();
-                break;
-        }
+        inventory.Use();
     }
     
     // Start is called before the first frame update

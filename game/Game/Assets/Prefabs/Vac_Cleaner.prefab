@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 751278653237422085}
   - component: {fileID: 4908615077564763124}
   - component: {fileID: 993069430031956348}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Vac_Cleaner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
