@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public void DestroyObject(GameObject gameObjectDestroy)
     {
         gameObjectDestroy.SetActive(false);
-        gameObjectDestroy.transform.position = Vector3.zero;
+        gameObjectDestroy.transform.position = new Vector3(10, 10);
     }
 
     public void ChangePickedItemUI(Item item)
