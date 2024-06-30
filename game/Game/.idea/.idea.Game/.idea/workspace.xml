@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6245987d-0272-46e2-8c71-c8fc26d41a2d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CodeAssist/Editor/ExternalReferences/SystemBinariesForDotNetStandard20.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SortingLayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SortingLayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/VacuumCleaner.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/VacuumCleaner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/VacuumCleaner.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/VacuumCleaner.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VacuumCleaner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/VacuumCleaner.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SpriteOpacity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SpriteOpacity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Dirty.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Dirty.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemCleaningAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemCleaningAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Pickable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Pickable.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,24 +141,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/SortingLayer.cs</url>
-          <line>49</line>
-          <properties documentPath="A:\Unity\rsv-gamejam-2024\game\Game\Assets\Scripts\SortingLayer.cs" containingFunctionPresentation="Method 'Update'">
-            <startOffsets>
-              <option value="1371" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1461" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

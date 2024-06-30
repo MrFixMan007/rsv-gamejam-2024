@@ -28,7 +28,7 @@ public abstract class Dirty : MonoBehaviour
 
     public float GetDirtyForce()
     {
-        return spriteOpacity.GetSpriteAlpha();
+        return spriteOpacity.GetStepOfPollution();
     }
 
     protected void FixedUpdate()

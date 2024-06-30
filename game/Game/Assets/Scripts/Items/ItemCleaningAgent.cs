@@ -15,4 +15,6 @@ public class ItemCleaningAgent : Item, Pickable
     {
         _dirty = dirty;
     }
+
+    public Sprite SpriteReadyToUse { get; }
 }

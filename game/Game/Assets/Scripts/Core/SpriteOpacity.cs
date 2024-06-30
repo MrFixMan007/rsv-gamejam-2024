@@ -15,6 +15,10 @@ public class SpriteOpacity : MonoBehaviour
     {
         return _spriteRenderer.color.a;
     }
+    public float GetStepOfPollution()
+    {
+        return stepOfPollution;
+    }
 
     public void MakeTransparent()
     {
