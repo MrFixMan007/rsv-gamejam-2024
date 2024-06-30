@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 751278653237422085}
   - component: {fileID: 4908615077564763124}
   - component: {fileID: 9136721079440736310}
-  - component: {fileID: 4292819735739670203}
   - component: {fileID: 6283404637602125818}
+  - component: {fileID: 4026319128306600398}
   m_Layer: 10
   m_Name: Dust
   m_TagString: Untagged
@@ -132,20 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4292819735739670203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4459946643349433134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb5112cdb39aac541ae086c59306f9eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedOfPollution: 5
-  containerLocation: {fileID: 0}
 --- !u!114 &6283404637602125818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,3 +145,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepOfPollution: 0.25
+--- !u!114 &4026319128306600398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459946643349433134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5112cdb39aac541ae086c59306f9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedOfPollution: 5
+  containerLocation: {fileID: 0}

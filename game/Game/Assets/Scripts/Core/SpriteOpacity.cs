@@ -11,6 +11,11 @@ public class SpriteOpacity : MonoBehaviour
         MakeTransparent();
     }
 
+    public float GetSpriteAlpha()
+    {
+        return _spriteRenderer.color.a;
+    }
+
     public void MakeTransparent()
     {
         ChangeTransparent(0f);

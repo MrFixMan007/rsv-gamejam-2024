@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     [SerializeField] private GameObject prefabItemVacuumCleaner;
     private GameObject _parentObject;
+    private float _countOfDusk;
+    private float _countOfMuck;
 
     public bool isGamePaused;
 
@@ -19,6 +21,36 @@ public class GameManager : MonoBehaviour
     //             break;
     //     }
     // }
+
+    public void NotifyAboutDirting(Dirty dirty)
+    {
+        switch (dirty)
+        {
+            case Dusk dusk:
+                _countOfDusk += dusk.GetDirtyForce();
+                break;
+            case Muck muck:
+                _countOfDusk += muck.GetDirtyForce();
+                break;
+        }
+        Debug.Log("Грязи " + _countOfMuck);
+        Debug.Log("Пыли " + _countOfDusk);
+    }
+    
+    public void NotifyAboutCleaning(Dirty dirty)
+    {
+        switch (dirty)
+        {
+            case Dusk dusk:
+                _countOfDusk -= dusk.GetDirtyForce();
+                break;
+            case Muck muck:
+                _countOfDusk -= muck.GetDirtyForce();
+                break;
+        }
+        Debug.Log("Грязи " + _countOfMuck);
+        Debug.Log("Пыли " + _countOfDusk);
+    }
 
     public void ReturnObject(GameObject gameObjectToReturn, Vector3 coordinates)
     {

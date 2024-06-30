@@ -2,9 +2,10 @@ public class Muck : Dirty
 {
     public override void Clean()
     {
-        if (_player.Inventory.Item is ItemWetMop)
+        if (player.Inventory.Item is ItemWetMop)
         {
-            _spriteOpacity.MakeTransparent();
+            gameManager.NotifyAboutCleaning(this);
+            spriteOpacity.MakeTransparent();
         }
     }
 }

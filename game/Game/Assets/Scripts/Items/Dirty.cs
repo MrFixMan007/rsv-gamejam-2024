@@ -3,36 +3,42 @@ using UnityEngine;
 public abstract class Dirty : MonoBehaviour
 {
     public float speedOfPollution = 5;
-    protected float _step;
-    protected SpriteOpacity _spriteOpacity;
-    protected GameObject _playerObject;
-    protected Player _player;
+    protected float step;
+    protected SpriteOpacity spriteOpacity;
+    protected GameObject playerObject;
+    protected Player player;
     
     [SerializeField] protected GameObject containerLocation;
     protected Location _location;
+    protected GameManager gameManager;
     
     public abstract void Clean();
 
     protected void Start()
     {
-        _spriteOpacity = GetComponentInChildren<SpriteOpacity>();
-        Debug.Log(_spriteOpacity);
+        spriteOpacity = GetComponentInChildren<SpriteOpacity>();
         if (containerLocation)
         {
             _location = containerLocation.GetComponent<Location>();
         }
-        _playerObject = GameObject.FindGameObjectWithTag("Player");
-        _player = _playerObject.GetComponent<Player>();
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.GetComponent<Player>();
+        gameManager = GameManager.Instance;
+    }
+
+    public float GetDirtyForce()
+    {
+        return spriteOpacity.GetSpriteAlpha();
     }
 
     protected void FixedUpdate()
     {
-        _step += Time.fixedDeltaTime;
-        if (_step >= speedOfPollution)
+        step += Time.fixedDeltaTime;
+        if (step >= speedOfPollution)
         {
-            _step = 0;
-            _spriteOpacity.PlusTransparent();
-            Debug.Log("Стало грязнее");
+            step = 0;
+            spriteOpacity.PlusTransparent();
+            gameManager.NotifyAboutDirting(this);
         }
     }
     
@@ -40,8 +46,7 @@ public abstract class Dirty : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Я мусор!");
-            _player.SetDirtyCanClear(gameObject);
+            player.SetDirtyCanClear(gameObject);
         }
     }
     
@@ -49,8 +54,7 @@ public abstract class Dirty : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("из мусора игрок Вышел");
-            _player.SetNoDirty();
+            player.SetNoDirty();
         }
     }
 }

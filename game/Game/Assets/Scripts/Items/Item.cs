@@ -28,8 +28,6 @@ public abstract class Item : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Игрок Привет!");
-            
             player.SetNewItemCanPickup(gameObject);
         }
     }
@@ -46,7 +44,6 @@ public abstract class Item : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Игрок Вышел(");
             player.SetCantPickup();
         }
     }
