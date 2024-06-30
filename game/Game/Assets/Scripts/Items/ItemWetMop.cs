@@ -20,6 +20,7 @@ public class ItemWetMop : Item, Pickable
             if (_countOfCharges <= 0)
             {
                 spriteRenderer.sprite = spriteGeneral;
+                GameManager.Instance.ChangePickedItemUI(this);
             }
         }
         if (player.ItemCanInteract is ItemSourceOfWater)
@@ -32,6 +33,7 @@ public class ItemWetMop : Item, Pickable
     {
         _countOfCharges = _maxCountOfCharges;
         spriteRenderer.sprite = spriteWithWater;
+        GameManager.Instance.ChangePickedItemUI(this);
     }
 
     public void PutDirtyCanClear(Dirty dirty)

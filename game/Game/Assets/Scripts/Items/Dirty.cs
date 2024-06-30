@@ -4,7 +4,7 @@ public abstract class Dirty : MonoBehaviour
 {
     public float LowerBoundSpeedOfPollution = 5;
     public float UpperBoundSpeedOfPollution = 50;
-    private float _speedOfPollution;
+    protected float speedOfPollution;
     protected float step;
     protected SpriteOpacity spriteOpacity;
     protected GameObject playerObject;
@@ -34,7 +34,7 @@ public abstract class Dirty : MonoBehaviour
         spriteGeneral = GetComponent<SpriteRenderer>().sprite;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        _speedOfPollution = Random.Range(LowerBoundSpeedOfPollution, UpperBoundSpeedOfPollution);
+        speedOfPollution = Random.Range(LowerBoundSpeedOfPollution, UpperBoundSpeedOfPollution);
     }
 
     public float GetDirtyForce()
@@ -45,7 +45,7 @@ public abstract class Dirty : MonoBehaviour
     protected void FixedUpdate()
     {
         step += Time.fixedDeltaTime;
-        if (step >= _speedOfPollution)
+        if (step >= speedOfPollution)
         {
             step = 0;
             spriteOpacity.PlusTransparent();

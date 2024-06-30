@@ -6,6 +6,7 @@ public class Puddle : Dirty
         {
             gameManager.NotifyAboutCleaning(this);
             spriteOpacity.MakeTransparent();
+            speedOfPollution += LowerBoundSpeedOfPollution;
         }
     }
 }
