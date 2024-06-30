@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751278653237422085}
   - component: {fileID: 4908615077564763124}
-  - component: {fileID: 993069430031956348}
+  - component: {fileID: -3875753566048303903}
   - component: {fileID: 9136721079440736310}
   m_Layer: 10
   m_Name: WetVacuumCleaner
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &993069430031956348
+--- !u!114 &-3875753566048303903
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4459946643349433134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31309055bb95eed4d951774cdf3845ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 527cd661ac2d5d941adb2ae159e0662e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   containerLocation: {fileID: 0}
@@ -132,16 +132,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010693431, y: -0.04023184}
+  m_Offset: {x: -0.0155394375, y: -0.04073632}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0, w: 0.14}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.48}
+    oldSize: {x: 0.32, y: 0.36}
     newSize: {x: 0.32, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25923592, y: 0.23417345}
+  m_Size: {x: 0.257218, y: 0.25536156}
   m_EdgeRadius: 0

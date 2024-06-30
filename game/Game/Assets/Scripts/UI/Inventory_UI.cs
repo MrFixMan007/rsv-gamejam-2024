@@ -5,6 +5,8 @@ public class Inventory_UI : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite Cleaner;
     public Sprite Mop;
+    public Sprite Agent;
+    public Sprite Cleaner_pro;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -17,15 +19,15 @@ public class Inventory_UI : MonoBehaviour
             case ItemVacuumCleaner VC:
                 spriteRenderer.sprite = Cleaner;
                 break;
-           /* case Rectangle s when (s.Length == s.Height):
-                WriteLine($"{s.Length} x {s.Height} square");
+            case ItemCleaningAgent CA:
+                spriteRenderer.sprite = Agent;
                 break;
-            case Rectangle r:
-                WriteLine($"{r.Length} x {r.Height} rectangle");
+            case ItemWetMop WM:
+                spriteRenderer.sprite = Mop;
                 break;
-            default:
-                WriteLine("<unknown shape>");
-                break;*/
+            case ItemWetVacuumCleaner VCP:
+                spriteRenderer.sprite = Cleaner_pro;
+                break;
             case null:
                 empty_picked_item();
                 break;
