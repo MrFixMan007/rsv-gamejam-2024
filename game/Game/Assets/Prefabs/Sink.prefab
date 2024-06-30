@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8099434203704702296}
   - component: {fileID: 5966167039993148515}
   m_Layer: 0
-  m_Name: Sink0
+  m_Name: Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,3 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   containerLocation: {fileID: 0}
+  spriteReadyForUse: {fileID: 21300000, guid: 116754c45be5f9e4caf0cdc8670c37aa, type: 3}
