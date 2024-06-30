@@ -4,23 +4,11 @@ public class GameManager : MonoBehaviour
 {
     private Inventory_UI _inventoryUI;
     public static GameManager Instance { get; private set; }
-    [SerializeField] private GameObject prefabItemVacuumCleaner;
     private GameObject _parentObject;
     private float _countOfDusk;
     private float _countOfMuck;
 
     public bool isGamePaused;
-
-    // public void SpawnPickablePrefab(Pickable item, Vector3 newItemCoordinates)
-    // {
-    //     Debug.Log(item);
-    //     switch (item)
-    //     {
-    //         case ItemVacuumCleaner:
-    //             Instantiate(prefabItemVacuumCleaner, newItemCoordinates, Quaternion.identity, _parentObject.transform);
-    //             break;
-    //     }
-    // }
 
     public void NotifyAboutDirting(Dirty dirty)
     {
