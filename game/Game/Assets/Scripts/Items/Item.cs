@@ -22,14 +22,6 @@ public abstract class Item : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // protected void OnCollisionEnter2D(Collision2D other)
-    // {
-    //     if (other.gameObject.CompareTag("Player"))
-    //     {
-    //         Debug.Log("Игрок Привет!");
-    //     }
-    // }
-
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player") && spriteReadyForUse != null)
@@ -38,14 +30,6 @@ public abstract class Item : MonoBehaviour
             player.SetNewItemCanPickup(gameObject);
         }
     }
-
-    // protected void OnCollisionExit2D(Collision2D other)
-    // {
-    //     if (other.gameObject.CompareTag("Player"))
-    //     {
-    //         Debug.Log("Игрок Вышел(");
-    //     }
-    // }
 
     protected virtual void OnTriggerExit2D(Collider2D other)
     {

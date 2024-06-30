@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 751278653237422085}
   - component: {fileID: 4908615077564763124}
+  - component: {fileID: 1557862961747372732}
   - component: {fileID: 9136721079440736310}
-  - component: {fileID: -6707928747956973140}
   m_Layer: 10
   m_Name: WetMop
   m_TagString: Untagged
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1398321945
   m_SortingLayer: 2
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d6877a5d4de0b1a449130c634b4082ac, type: 3}
+  m_SortingOrder: 12
+  m_Sprite: {fileID: 21300000, guid: 458865cb844abc5439fe0e0b73ad1c03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,6 +86,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1557862961747372732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459946643349433134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a342e8e89740e24daf46c8f6201775c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  containerLocation: {fileID: 0}
+  spriteReadyForUse: {fileID: 21300000, guid: 8da0f7a85d6dc3342be022fb023577fc, type: 3}
+  _maxCountOfCharges: 10
+  _countOfCharges: 0
+  spriteWithWaterReadyForUse: {fileID: 21300000, guid: e2dde53b0a239644591c860ffe778b81, type: 3}
+  spriteWithWater: {fileID: 21300000, guid: dc97bd1bb96df3440a6ad78972f4b449, type: 3}
 --- !u!61 &9136721079440736310
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -131,18 +149,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.29283166, y: 0.47114074}
   m_EdgeRadius: 0
---- !u!114 &-6707928747956973140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4459946643349433134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a342e8e89740e24daf46c8f6201775c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  containerLocation: {fileID: 0}
-  _maxCountOfCharges: 10
-  _countOfCharges: 0
