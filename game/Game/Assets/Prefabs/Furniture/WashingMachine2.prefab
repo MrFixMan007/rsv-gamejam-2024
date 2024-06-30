@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 4602273281603704143}
   - component: {fileID: 2476059318148457838}
   - component: {fileID: 8099434203704702296}
-  - component: {fileID: 5966167039993148515}
   m_Layer: 0
-  m_Name: Sink
+  m_Name: WashingMachine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 1398321945
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 71ef9202de8ddc84db8acc869fee5ce0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d0a6dd8184aa9a46a6c62476bf63cbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,29 +117,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000029802322, y: -0.02362214}
+  m_Offset: {x: 0.000000078231096, y: -0.024839848}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.48, y: 0.48}
+    oldSize: {x: 0.32, y: 0.48}
     newSize: {x: 0.48, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4054038, y: 0.3581595}
+  m_Size: {x: 0.2201741, y: 0.3881125}
   m_EdgeRadius: 0
---- !u!114 &5966167039993148515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9023356770862640949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcbfc972d5d51a45bc362aeb095f981, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  containerLocation: {fileID: 0}
