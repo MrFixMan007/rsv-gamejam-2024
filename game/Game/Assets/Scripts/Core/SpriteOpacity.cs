@@ -21,7 +21,7 @@ public class SpriteOpacity : MonoBehaviour
         ChangeTransparent(1f);
     }
 
-    private void ChangeTransparent(float newAlpha)
+    public void ChangeTransparent(float newAlpha)
     {
         if (_spriteRenderer != null)
         {
@@ -41,4 +41,6 @@ public class SpriteOpacity : MonoBehaviour
             _spriteRenderer.color = newColor;
         }
     }
+
+    public bool IsFullDirty() => _spriteRenderer.color.a >= 1;
 }

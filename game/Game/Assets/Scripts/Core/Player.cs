@@ -3,25 +3,36 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Clothes Clothes;
-    private readonly Inventory _inventory = new Inventory();
+    public readonly Inventory Inventory = new Inventory();
+    public Item ItemCanInteract;
     
     public void DiscardItem(Vector3 discardedItemCoordinates)
     {
-        if (!_inventory.IsEmpty()) _inventory.DiscardItem(discardedItemCoordinates);
+        if (!Inventory.IsEmpty()) Inventory.DiscardItem(discardedItemCoordinates);
     }
 
     public void Interact()
     {
-        _inventory.Use();
+        Inventory.Use();
     }
 
     public void SetNewItemCanPickup(GameObject newItemCanPickup)
     {
-        _inventory.NewItemCanPickup = newItemCanPickup;
+        Inventory.NewItemCanPickup = newItemCanPickup;
     }
     
     public void SetCantPickup()
     {
-        _inventory.NewItemCanPickup = null;
+        Inventory.NewItemCanPickup = null;
+    }
+    
+    public void SetDirtyCanClear(GameObject dirtyObject)
+    {
+        Inventory.SetDirtyCanClear(dirtyObject);
+    }
+
+    public void SetNoDirty()
+    {
+        Inventory.SetNoDirty();
     }
 }

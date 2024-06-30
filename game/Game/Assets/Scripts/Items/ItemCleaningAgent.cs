@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ItemVacuumCleaner : Item, Pickable
+public class ItemCleaningAgent : Item, Pickable
 {
     private Dirty _dirty;
     private GameObject _dirtyCanClear;

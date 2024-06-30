@@ -7,12 +7,4 @@ public class Cooking : Item
     {
 
     }
-    override protected void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
 }

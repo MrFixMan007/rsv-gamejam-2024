@@ -1,24 +1,31 @@
 using UnityEngine;
 
-public class Dirty : MonoBehaviour
+public abstract class Dirty : MonoBehaviour
 {
     public float speedOfPollution = 5;
-    private float _step;
-    private SpriteOpacity _spriteOpacity;
-    private GameObject _player;
+    protected float _step;
+    protected SpriteOpacity _spriteOpacity;
+    protected GameObject _playerObject;
+    protected Player _player;
     
     [SerializeField] protected GameObject containerLocation;
-    private Location _location;
+    protected Location _location;
+    
+    public abstract void Clean();
 
     protected void Start()
     {
         _spriteOpacity = GetComponentInChildren<SpriteOpacity>();
         Debug.Log(_spriteOpacity);
-        _location = containerLocation.GetComponent<Location>();
-        _player = GameObject.FindGameObjectWithTag("Player");
+        if (containerLocation)
+        {
+            _location = containerLocation.GetComponent<Location>();
+        }
+        _playerObject = GameObject.FindGameObjectWithTag("Player");
+        _player = _playerObject.GetComponent<Player>();
     }
 
-    private void FixedUpdate()
+    protected void FixedUpdate()
     {
         _step += Time.fixedDeltaTime;
         if (_step >= speedOfPollution)
@@ -28,12 +35,22 @@ public class Dirty : MonoBehaviour
             Debug.Log("Стало грязнее");
         }
     }
-
-    public void Clean()
+    
+    protected void OnTriggerEnter2D(Collider2D other)
     {
-        if (_player.GetComponent<Inventory>().Item is ItemVacuumCleaner)
+        if (other.gameObject.CompareTag("Player"))
         {
-            _spriteOpacity.MakeTransparent();
+            Debug.Log("Я мусор!");
+            _player.SetDirtyCanClear(gameObject);
+        }
+    }
+    
+    protected void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("из мусора игрок Вышел");
+            _player.SetNoDirty();
         }
     }
 }
