@@ -32,12 +32,12 @@ public class PlayerMovement : MonoBehaviour
         if (_movement.x < 0)
         {
             // Движение влево
-            _spriteRenderer.flipX = false;
+            _spriteRenderer.flipX = true;
         }
         else if (_movement.x > 0)
         {
             // Движение вправо
-            _spriteRenderer.flipX = true;
+            _spriteRenderer.flipX = false;
         }
     }
 
