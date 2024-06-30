@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ItemVegetables : Item, Pickable
+public class ItemMeat : Item, Pickable
 {
     public override void Use()
     {
