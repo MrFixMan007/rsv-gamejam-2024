@@ -347,5 +347,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
-  Cleaner: {fileID: 21300000, guid: f539b79d443e08346a2acb9e04d26c20, type: 3}
+  Cleaner: {fileID: 21300000, guid: 3b276317272750f4386b14fa4ba41bf8, type: 3}
   Mop: {fileID: 21300000, guid: 71ef9202de8ddc84db8acc869fee5ce0, type: 3}

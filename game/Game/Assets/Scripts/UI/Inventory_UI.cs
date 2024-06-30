@@ -1,9 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using Unity.VisualScripting;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class Inventory_UI : MonoBehaviour
