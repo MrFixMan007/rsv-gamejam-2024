@@ -1,8 +1,8 @@
-public class Muck : Dirty
+public class Puddle : Dirty
 {
     public override void Clean()
     {
-        if (player.Inventory.Item is ItemWetMop or ItemWetVacuumCleaner)
+        if (player.Inventory.Item is ItemCleaningAgent)
         {
             gameManager.NotifyAboutCleaning(this);
             spriteOpacity.MakeTransparent();

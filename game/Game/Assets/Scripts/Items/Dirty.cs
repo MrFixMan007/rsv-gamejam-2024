@@ -2,7 +2,9 @@ using UnityEngine;
 
 public abstract class Dirty : MonoBehaviour
 {
-    public float speedOfPollution = 5;
+    public float LowerBoundSpeedOfPollution = 5;
+    public float UpperBoundSpeedOfPollution = 50;
+    private float _speedOfPollution;
     protected float step;
     protected SpriteOpacity spriteOpacity;
     protected GameObject playerObject;
@@ -11,6 +13,10 @@ public abstract class Dirty : MonoBehaviour
     [SerializeField] protected GameObject containerLocation;
     protected Location _location;
     protected GameManager gameManager;
+    
+    [SerializeField] protected Sprite spriteReadyForUse;
+    protected Sprite spriteGeneral;
+    protected SpriteRenderer spriteRenderer;
     
     public abstract void Clean();
 
@@ -24,6 +30,11 @@ public abstract class Dirty : MonoBehaviour
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<Player>();
         gameManager = GameManager.Instance;
+        
+        spriteGeneral = GetComponent<SpriteRenderer>().sprite;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        _speedOfPollution = Random.Range(LowerBoundSpeedOfPollution, UpperBoundSpeedOfPollution);
     }
 
     public float GetDirtyForce()
@@ -34,7 +45,7 @@ public abstract class Dirty : MonoBehaviour
     protected void FixedUpdate()
     {
         step += Time.fixedDeltaTime;
-        if (step >= speedOfPollution)
+        if (step >= _speedOfPollution)
         {
             step = 0;
             spriteOpacity.PlusTransparent();
@@ -46,6 +57,7 @@ public abstract class Dirty : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            spriteRenderer.sprite = spriteReadyForUse;
             player.SetDirtyCanClear(gameObject);
         }
     }
@@ -54,6 +66,7 @@ public abstract class Dirty : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            spriteRenderer.sprite = spriteGeneral;
             player.SetNoDirty();
         }
     }

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 751278653237422085}
   - component: {fileID: 4908615077564763124}
   - component: {fileID: 9136721079440736310}
-  - component: {fileID: -1732734972398191703}
   - component: {fileID: 3574737612436502723}
+  - component: {fileID: -4981815809446111842}
   m_Layer: 10
-  m_Name: Muck
+  m_Name: Puddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 1398321945
   m_SortingLayer: 2
   m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: ec54f3564e1fa6f46bf553f353baab45, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2a706d9af7b5d54b8b114307172904a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.32, y: 0.16}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -132,21 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15421835, y: 0.12841477}
   m_EdgeRadius: 0
---- !u!114 &-1732734972398191703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4459946643349433134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f7d0273f091833408059a26fec9ba8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedOfPollution: 5
-  containerLocation: {fileID: 0}
-  spriteReadyForUse: {fileID: 21300000, guid: bc30548a189be344dab6682ffc417340, type: 3}
 --- !u!114 &3574737612436502723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +145,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepOfPollution: 0.8
+--- !u!114 &-4981815809446111842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459946643349433134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532d6defc6694ca4c8a68e3a60c0682a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedOfPollution: 5
+  containerLocation: {fileID: 0}
+  spriteReadyForUse: {fileID: 21300000, guid: 5c882d83448a50646a683aa83fc6a917, type: 3}

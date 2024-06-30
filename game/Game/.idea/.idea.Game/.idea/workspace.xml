@@ -6,19 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6245987d-0272-46e2-8c71-c8fc26d41a2d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Mop1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Mop1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Mop1ReadyToUse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Mop1ReadyToUse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Mop2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Mop2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Mop2ReadyToUse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Mop2ReadyToUse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CodeAssist/Editor/ExternalReferences/SystemBinariesForDotNetStandard20.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WetMop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WetMop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WetVacuumCleaner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WetVacuumCleaner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemWetMop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemWetMop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dust.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dust.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Muck.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Muck.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Dirty.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Dirty.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Dusk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Dusk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemSourceOfWater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemSourceOfWater.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Muck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Muck.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
