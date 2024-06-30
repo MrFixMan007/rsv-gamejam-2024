@@ -421,6 +421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   Cleaner: {fileID: 21300000, guid: 11b26075f85f76645adc28727b8cd846, type: 3}
-  Mop: {fileID: 21300000, guid: d6877a5d4de0b1a449130c634b4082ac, type: 3}
-  Agent: {fileID: 21300000, guid: 80ffe0e685da5b4409c969bc73e8ecc7, type: 3}
   Cleaner_pro: {fileID: 21300000, guid: 593a12e6cb461d24f9f7f66917f143fa, type: 3}
+  Mop_empty: {fileID: 21300000, guid: 458865cb844abc5439fe0e0b73ad1c03, type: 3}
+  Mop_wet: {fileID: 21300000, guid: dc97bd1bb96df3440a6ad78972f4b449, type: 3}
+  Agent: {fileID: 21300000, guid: 80ffe0e685da5b4409c969bc73e8ecc7, type: 3}

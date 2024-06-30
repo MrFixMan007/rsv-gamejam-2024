@@ -1,12 +1,14 @@
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class Inventory_UI : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public Sprite Cleaner;
-    public Sprite Mop;
-    public Sprite Agent;
     public Sprite Cleaner_pro;
+    public Sprite Mop_empty;
+    public Sprite Mop_wet;
+    public Sprite Agent;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -23,7 +25,7 @@ public class Inventory_UI : MonoBehaviour
                 spriteRenderer.sprite = Agent;
                 break;
             case ItemWetMop WM:
-                spriteRenderer.sprite = Mop;
+                spriteRenderer.sprite = WM.IsEmpty() ? Mop_empty : Mop_wet;
                 break;
             case ItemWetVacuumCleaner VCP:
                 spriteRenderer.sprite = Cleaner_pro;

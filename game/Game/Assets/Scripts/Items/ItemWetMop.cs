@@ -39,6 +39,11 @@ public class ItemWetMop : Item, Pickable
         _dirty = dirty;
     }
 
+    public bool IsEmpty()
+    {
+        return _countOfCharges <= 0;
+    }
+
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player") && spriteReadyForUse != null)
