@@ -7,14 +7,15 @@ public class SortingLayer : MonoBehaviour
 {
     private GameObject _playerObject;
     private TilemapRenderer _tilemapRenderer;
+    private SpriteRenderer _spriteRenderer;
     [SerializeField] private string tagToFind = "Foundation";
     private GameObject _foundationObject;
     private GameObject _foundationPlayerObject;
-    
+
     void Start()
     {
         _playerObject = GameObject.FindGameObjectWithTag("Player");
-        
+
         Transform[] allChildren = _playerObject.GetComponentsInChildren<Transform>();
 
         foreach (Transform child in allChildren)
@@ -25,32 +26,52 @@ public class SortingLayer : MonoBehaviour
                 break;
             }
         }
-        
-        _tilemapRenderer = GetComponent<TilemapRenderer>();
-        
-        allChildren = GetComponentsInChildren<Transform>();
 
-        foreach (Transform child in allChildren)
+        _tilemapRenderer = GetComponent<TilemapRenderer>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (_tilemapRenderer || _spriteRenderer)
         {
-            if (child.CompareTag(tagToFind))
+            allChildren = GetComponentsInChildren<Transform>();
+
+            foreach (Transform child in allChildren)
             {
-                _foundationObject = child.gameObject;
-                break;
+                if (child.CompareTag(tagToFind))
+                {
+                    _foundationObject = child.gameObject;
+                    break;
+                }
             }
         }
     }
 
     void Update()
     {
-        // игрок за стеной
-        if (_foundationPlayerObject.transform.position.y > _foundationObject.transform.position.y)
+        if (_tilemapRenderer)
         {
-            _tilemapRenderer.sortingLayerName = "UpperPlayer";
+            // игрок за
+            if (_foundationPlayerObject.transform.position.y > _foundationObject.transform.position.y)
+            {
+                _tilemapRenderer.sortingLayerName = "UpperPlayer";
+            }
+            // игрок перед
+            else
+            {
+                _tilemapRenderer.sortingLayerName = "UnderPlayer";
+            }
         }
-        // игрок перед стеной
-        else
+        else if (_spriteRenderer)
         {
-            _tilemapRenderer.sortingLayerName = "UnderPlayer";
+            // игрок за
+            if (_foundationPlayerObject.transform.position.y > _foundationObject.transform.position.y)
+            {
+                _spriteRenderer.sortingLayerName = "UpperPlayer";
+            }
+            // игрок перед
+            else
+            {
+                _spriteRenderer.sortingLayerName = "UnderPlayer";
+            }
         }
     }
 }

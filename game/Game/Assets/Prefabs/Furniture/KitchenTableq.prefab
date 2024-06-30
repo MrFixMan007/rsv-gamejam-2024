@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1456278370544916186
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3550291361917230683}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Foundation
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3550291361917230683
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456278370544916186}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.105, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4602273281603704143}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9023356770862640949
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4602273281603704143}
   - component: {fileID: 2476059318148457838}
-  - component: {fileID: 7926215272121146183}
   - component: {fileID: 8099434203704702296}
   m_Layer: 0
-  m_Name: Sofa bck
+  m_Name: KitchenTableq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,8 +30,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 300, y: 300, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3550291361917230683}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2476059318148457838
@@ -104,10 +71,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1398321945
-  m_SortingLayer: 2
+  m_SortingLayerID: -460946527
+  m_SortingLayer: 4
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300000, guid: bc391cd2cfcfff344b7661e756bce576, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5eca66f850810bf4b9dddfc1c7e7ea25, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7926215272121146183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9023356770862640949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0623711a275bdb942ac0624207af730c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagToFind: Foundation
 --- !u!61 &8099434203704702296
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,16 +117,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0027707368, y: -0.026651613}
+  m_Offset: {x: 0.0070477426, y: -0.08819093}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.32}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 0.48, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47190103, y: 0.21352862}
+  m_Size: {x: 0.59257406, y: 0.42235354}
   m_EdgeRadius: 0
