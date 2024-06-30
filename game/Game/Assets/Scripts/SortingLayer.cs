@@ -11,7 +11,6 @@ public class SortingLayer : MonoBehaviour
     private GameObject _foundationObject;
     private GameObject _foundationPlayerObject;
     
-    // Start is called before the first frame update
     void Start()
     {
         _playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -22,7 +21,6 @@ public class SortingLayer : MonoBehaviour
         {
             if (child.CompareTag(tagToFind))
             {
-                Debug.Log(child);
                 _foundationPlayerObject = child.gameObject;
                 break;
             }
@@ -36,24 +34,22 @@ public class SortingLayer : MonoBehaviour
         {
             if (child.CompareTag(tagToFind))
             {
-                Debug.Log(child);
                 _foundationObject = child.gameObject;
                 break;
             }
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // игрок за стеной
         if (_foundationPlayerObject.transform.position.y > _foundationObject.transform.position.y)
         {
-            Debug.Log("Игрок за стеной");
             _tilemapRenderer.sortingLayerName = "UpperPlayer";
         }
+        // игрок перед стеной
         else
         {
-            Debug.Log("Игрок перед стеной");
             _tilemapRenderer.sortingLayerName = "UnderPlayer";
         }
     }
