@@ -5,33 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6245987d-0272-46e2-8c71-c8fc26d41a2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/WalkBackward.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/WalkBackward.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/WalkForward.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/WalkForward.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Ginger.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Ginger.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Player/Idle.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Player/Idle/8.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CodeAssist/Editor/ExternalReferences/SystemBinariesForDotNetStandard20.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player1.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
