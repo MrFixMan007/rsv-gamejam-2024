@@ -3,8 +3,11 @@ using UnityEngine;
 public abstract class Dirty : MonoBehaviour
 {
     public float LowerBoundSpeedOfPollution = 5;
-    public float UpperBoundSpeedOfPollution = 50;
-    protected float speedOfPollution;
+    public float UpperBoundSpeedOfPollution = 20;
+    public float LowerBoundCountOfCharges = 5;
+    public float UpperBoundCountOfCharges = 10;
+    [SerializeField] protected float countOfCharges;
+    [SerializeField] protected float speedOfPollution;
     protected float step;
     protected SpriteOpacity spriteOpacity;
     protected GameObject playerObject;
@@ -35,6 +38,7 @@ public abstract class Dirty : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         speedOfPollution = Random.Range(LowerBoundSpeedOfPollution, UpperBoundSpeedOfPollution);
+        countOfCharges = Random.Range(LowerBoundCountOfCharges, UpperBoundCountOfCharges);
     }
 
     public float GetDirtyForce()
@@ -44,12 +48,15 @@ public abstract class Dirty : MonoBehaviour
 
     protected void FixedUpdate()
     {
-        step += Time.fixedDeltaTime;
-        if (step >= speedOfPollution)
+        if (countOfCharges > 0 && !spriteOpacity.IsFullDirty())
         {
-            step = 0;
-            spriteOpacity.PlusTransparent();
-            gameManager.NotifyAboutDirting(this);
+            step += Time.fixedDeltaTime;
+            if (step >= speedOfPollution)
+            {
+                step = 0;
+                spriteOpacity.PlusTransparent();
+                gameManager.NotifyAboutDirting(this);
+            }
         }
     }
     

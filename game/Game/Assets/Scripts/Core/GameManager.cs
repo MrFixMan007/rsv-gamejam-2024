@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,8 +8,12 @@ public class GameManager : MonoBehaviour
     private GameObject _parentObject;
     private float _countOfDusk;
     private float _countOfMuck;
+    private float _countOfPuddle;
+    [SerializeField] private float _countOfDirtyCanHoldToWin = 5;
 
+    [SerializeField] private float _timeOfGame = 20;
     public bool isGamePaused;
+    private float _step;
 
     public void NotifyAboutDirting(Dirty dirty)
     {
@@ -18,7 +23,10 @@ public class GameManager : MonoBehaviour
                 _countOfDusk += dusk.GetDirtyForce();
                 break;
             case Muck muck:
-                _countOfDusk += muck.GetDirtyForce();
+                _countOfMuck += muck.GetDirtyForce();
+                break;
+            case Puddle puddle:
+                _countOfPuddle += puddle.GetDirtyForce();
                 break;
         }
         Debug.Log("Грязи " + _countOfMuck);
@@ -33,11 +41,14 @@ public class GameManager : MonoBehaviour
                 _countOfDusk -= dusk.GetDirtyForce();
                 break;
             case Muck muck:
-                _countOfDusk -= muck.GetDirtyForce();
+                _countOfMuck -= muck.GetDirtyForce();
+                break;
+            case Puddle puddle:
+                _countOfPuddle -= puddle.GetDirtyForce();
                 break;
         }
-        Debug.Log("Грязи " + _countOfMuck);
-        Debug.Log("Пыли " + _countOfDusk);
+        Debug.Log("Грязи осталось" + _countOfMuck);
+        Debug.Log("Пыли осталось" + _countOfDusk);
     }
 
     public void ReturnObject(GameObject gameObjectToReturn, Vector3 coordinates)
@@ -77,6 +88,20 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject); // Удаляет дублирующийся объект
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        _step += Time.fixedDeltaTime;
+        if (_step >= _timeOfGame)
+        {
+            if (_countOfDusk + _countOfMuck + _countOfPuddle > _countOfDirtyCanHoldToWin)
+            {
+                Debug.Log("Вы проиграли!");
+            }
+            else Debug.Log("Вы выигралиииии!");
+            PauseGame();
         }
     }
 

@@ -6,7 +6,8 @@ public class Muck : Dirty
         {
             gameManager.NotifyAboutCleaning(this);
             spriteOpacity.MakeTransparent();
-            speedOfPollution += LowerBoundSpeedOfPollution;
+            speedOfPollution += 1;
+            countOfCharges -= 1;
         }
     }
 }
