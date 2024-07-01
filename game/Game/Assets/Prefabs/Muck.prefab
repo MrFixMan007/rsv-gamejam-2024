@@ -144,6 +144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7d0273f091833408059a26fec9ba8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LowerBoundSpeedOfPollution: 5
+  UpperBoundSpeedOfPollution: 10
+  LowerBoundCountOfCharges: 2
+  UpperBoundCountOfCharges: 3
+  countOfCharges: 0
   speedOfPollution: 5
   containerLocation: {fileID: 0}
   spriteReadyForUse: {fileID: 21300000, guid: bc30548a189be344dab6682ffc417340, type: 3}
@@ -159,4 +164,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17805bcf5a012d43a463185edcf84ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepOfPollution: 0.8
+  stepOfPollution: 1

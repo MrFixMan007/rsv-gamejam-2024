@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private float _countOfDusk;
     private float _countOfMuck;
     private float _countOfPuddle;
-    [SerializeField] private float _countOfDirtyCanHoldToWin = 5;
+    [SerializeField] private float _countOfDirtyCanHoldToWin = 3;
 
     [SerializeField] private float _timeOfGame = 20;
     public bool isGamePaused;
@@ -20,17 +20,18 @@ public class GameManager : MonoBehaviour
         switch (dirty)
         {
             case Dusk dusk:
-                _countOfDusk += dusk.GetDirtyForce();
+                _countOfDusk += 1;
+                Debug.Log("Пыли " + _countOfDusk);
                 break;
             case Muck muck:
-                _countOfMuck += muck.GetDirtyForce();
+                _countOfMuck += 1;
+                Debug.Log("Грязи " + _countOfMuck);
                 break;
             case Puddle puddle:
-                _countOfPuddle += puddle.GetDirtyForce();
+                _countOfPuddle += 1;
+                Debug.Log("Луж " + _countOfPuddle);
                 break;
         }
-        Debug.Log("Грязи " + _countOfMuck);
-        Debug.Log("Пыли " + _countOfDusk);
     }
     
     public void NotifyAboutCleaning(Dirty dirty)
@@ -38,17 +39,18 @@ public class GameManager : MonoBehaviour
         switch (dirty)
         {
             case Dusk dusk:
-                _countOfDusk -= dusk.GetDirtyForce();
+                _countOfDusk -= 1;
+                Debug.Log("Пыли осталось " + _countOfDusk);
                 break;
             case Muck muck:
-                _countOfMuck -= muck.GetDirtyForce();
+                _countOfMuck -= 1;
+                Debug.Log("Грязи осталось " + _countOfMuck);
                 break;
             case Puddle puddle:
-                _countOfPuddle -= puddle.GetDirtyForce();
+                _countOfPuddle -= 1;
+                Debug.Log("Луж осталось " + _countOfPuddle);
                 break;
         }
-        Debug.Log("Грязи осталось" + _countOfMuck);
-        Debug.Log("Пыли осталось" + _countOfDusk);
     }
 
     public void ReturnObject(GameObject gameObjectToReturn, Vector3 coordinates)
@@ -83,7 +85,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Сохраняет объект при загрузке новой сцены
+            // DontDestroyOnLoad(gameObject); // Сохраняет объект при загрузке новой сцены
         }
         else
         {
@@ -96,6 +98,7 @@ public class GameManager : MonoBehaviour
         _step += Time.fixedDeltaTime;
         if (_step >= _timeOfGame)
         {
+            Debug.Log("Счёт: " + _countOfDusk + _countOfMuck + _countOfPuddle);
             if (_countOfDusk + _countOfMuck + _countOfPuddle > _countOfDirtyCanHoldToWin)
             {
                 Debug.Log("Вы проиграли!");

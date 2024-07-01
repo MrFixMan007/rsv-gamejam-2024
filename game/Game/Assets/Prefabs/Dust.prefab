@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17805bcf5a012d43a463185edcf84ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepOfPollution: 0.8
+  stepOfPollution: 1
 --- !u!114 &4026319128306600398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,5 +159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LowerBoundSpeedOfPollution: 5
   UpperBoundSpeedOfPollution: 50
+  LowerBoundCountOfCharges: 2
+  UpperBoundCountOfCharges: 3
+  countOfCharges: 0
+  speedOfPollution: 0
   containerLocation: {fileID: 0}
   spriteReadyForUse: {fileID: 21300000, guid: 68275cd675344bf479d33f6aeda7f142, type: 3}

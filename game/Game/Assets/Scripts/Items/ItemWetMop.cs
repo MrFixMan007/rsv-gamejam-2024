@@ -13,7 +13,7 @@ public class ItemWetMop : Item, Pickable
 
     public override void Use()
     {
-        if (_dirty && _countOfCharges > 0)
+        if (_dirty is Muck && _countOfCharges > 0)
         {
             _dirty.Clean();
             _countOfCharges -= 1;

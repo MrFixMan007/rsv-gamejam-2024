@@ -3,9 +3,9 @@ using UnityEngine;
 public abstract class Dirty : MonoBehaviour
 {
     public float LowerBoundSpeedOfPollution = 5;
-    public float UpperBoundSpeedOfPollution = 20;
-    public float LowerBoundCountOfCharges = 5;
-    public float UpperBoundCountOfCharges = 10;
+    public float UpperBoundSpeedOfPollution = 10;
+    public float LowerBoundCountOfCharges = 2;
+    public float UpperBoundCountOfCharges = 3;
     [SerializeField] protected float countOfCharges;
     [SerializeField] protected float speedOfPollution;
     protected float step;
@@ -48,10 +48,10 @@ public abstract class Dirty : MonoBehaviour
 
     protected void FixedUpdate()
     {
-        if (countOfCharges > 0 && !spriteOpacity.IsFullDirty())
+        if (countOfCharges > 0)
         {
             step += Time.fixedDeltaTime;
-            if (step >= speedOfPollution)
+            if (step >= speedOfPollution && !spriteOpacity.IsFullDirty())
             {
                 step = 0;
                 spriteOpacity.PlusTransparent();

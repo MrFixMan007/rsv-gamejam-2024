@@ -7,7 +7,7 @@ public class ItemWetVacuumCleaner : Item, Pickable
     
     public override void Use()
     {
-        if (_dirty) _dirty.Clean();
+        if (_dirty is Dusk or Muck) _dirty.Clean();
         // if(location) location.Clear();
     }
 
