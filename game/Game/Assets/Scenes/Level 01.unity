@@ -5234,7 +5234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _countOfDirtyCanHoldToWin: 5
-  _timeOfGame: 90
+  _timeOfGame: 360
   isGamePaused: 0
 --- !u!1001 &1793892933
 PrefabInstance:

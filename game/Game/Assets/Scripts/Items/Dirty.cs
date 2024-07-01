@@ -3,9 +3,9 @@ using UnityEngine;
 public abstract class Dirty : MonoBehaviour
 {
     public float LowerBoundSpeedOfPollution = 5;
-    public float UpperBoundSpeedOfPollution = 10;
+    public float UpperBoundSpeedOfPollution = 15;
     public float LowerBoundCountOfCharges = 2;
-    public float UpperBoundCountOfCharges = 3;
+    public float UpperBoundCountOfCharges = 10;
     [SerializeField] protected float countOfCharges;
     [SerializeField] protected float speedOfPollution;
     protected float step;

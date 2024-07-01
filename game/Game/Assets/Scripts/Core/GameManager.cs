@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Вы проиграли!");
             }
             else Debug.Log("Вы выигралиииии!");
-            PauseGame();
+            //PauseGame();
         }
     }
 

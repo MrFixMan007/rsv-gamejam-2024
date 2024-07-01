@@ -158,9 +158,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LowerBoundSpeedOfPollution: 5
-  UpperBoundSpeedOfPollution: 10
+  UpperBoundSpeedOfPollution: 15
   LowerBoundCountOfCharges: 2
-  UpperBoundCountOfCharges: 3
+  UpperBoundCountOfCharges: 18
   countOfCharges: 0
   speedOfPollution: 5
   containerLocation: {fileID: 0}

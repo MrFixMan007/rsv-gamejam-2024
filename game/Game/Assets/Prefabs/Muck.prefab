@@ -147,7 +147,7 @@ MonoBehaviour:
   LowerBoundSpeedOfPollution: 5
   UpperBoundSpeedOfPollution: 10
   LowerBoundCountOfCharges: 2
-  UpperBoundCountOfCharges: 3
+  UpperBoundCountOfCharges: 20
   countOfCharges: 0
   speedOfPollution: 5
   containerLocation: {fileID: 0}
